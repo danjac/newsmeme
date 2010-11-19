@@ -1,0 +1,37 @@
+{% extends "user/layout.html" %}
+
+{% set selected_user_tab = "comments" %}
+
+{% block page_content %}
+
+{% if page_obj.total %}
+<ul class="comments">
+{% for comment in page_obj.items %}
+<li>
+
+<div>
+{% if comment.permissions.vote %}
+<span id="vote-comment-{{ comment.id }}">
+    <a href="#" onclick="newsmeme.vote_comment('{{ url_for('comment.upvote',  comment_id=comment.id) }}'); return false;"><img src="{{ theme_static("images/up-icon.png") }}"></a>
+    <a href="#" onclick="newsmeme.vote_comment('{{ url_for('comment.downvote', comment_id=comment.id) }}'); return false;"><img src="{{ theme_static("images/down-icon.png") }}"></a>  
+</span>
+{% endif %}
+{{ _('Score') }} <span id="score-comment-{{ comment.id }}">{{ comment.score }}</span> | 
+{{ _('Posted') }} {{ comment.date_created|timesince }} |
+<a href="{{ comment.url }}">context</a>  
+</div>
+
+{% if comment.comment %}
+{{ comment.markdown }}
+{% endif %}
+
+</li>
+{% endfor %}
+</ul>
+{% else %}
+{% trans username=user.username %}
+{{ username }} has not posted any comments yet.
+{% endtrans %}
+{% endif %}
+
+{% endblock %}

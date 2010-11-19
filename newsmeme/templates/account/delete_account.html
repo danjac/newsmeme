@@ -1,0 +1,25 @@
+{% extends theme("layout.html") %}
+{% from "macros/_forms.html" import render_errors %}
+
+{% block content %}
+<h2>{{ _('Delete your account') }}</h2>
+<p>
+{% trans home_url=url_for('frontend.index') %}
+Are you sure you want to leave ? If so please confirm below.
+Click <a href="{{ home_url }}">here</a> to cancel.
+{% endtrans %}
+</p>
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <ul>
+        <li>
+            {{ render_errors(form.recaptcha) }}
+            {{ form.recaptcha.label }} <br> {{ form.recaptcha }}
+        </li>
+        <li>
+        {{ form.submit }}
+            </li>
+    </ul>
+</form>
+
+{% endblock %}

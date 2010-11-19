@@ -1,0 +1,27 @@
+{% extends theme("layout.html") %}
+{% from "macros/_post.html" import markdown_link %}
+
+{% block content %}
+<h2><a href="{{ url_for("post.view", post_id=post.id) }}">{{ post.title }}</a></h2>
+
+{% if parent %}
+{{ parent.markdown }}
+{% endif %}
+
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <ul>
+        <li>
+            {{ form.comment }}
+        </li>
+        <li>
+        {{ form.submit }}
+            </li>
+        <li>
+            {{ markdown_link() }}
+            </li>
+ 
+    </ul>
+</form>
+
+{% endblock %}

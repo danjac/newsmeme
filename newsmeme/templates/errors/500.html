@@ -1,0 +1,14 @@
+
+{% extends theme("layout.html") %}
+
+{% block content %}
+<h2>{{ _('Sorry !') }}</h2>
+<p>
+    {% trans contact_url=url_for('frontend.contact') %}
+    It looks like an error has occurred. The admins will have been sent a nasty email telling
+    them to fix the problem as soon as possible. However if this issue persists then please 
+    <a href="{{ contact_url }}">contact us</a> or 
+    <a href="http://bitbucket.org/danjac/newsmeme/issues/new">report a bug</a>.
+    {% endtrans %}    
+</p>
+{% endblock %}

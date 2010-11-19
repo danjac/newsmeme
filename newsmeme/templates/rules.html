@@ -1,0 +1,21 @@
+{% extends theme("layout.html") %}
+
+{% block content %}
+{% trans contact_url=url_for('frontend.contact')  %}
+<h2>The House Rules</h2>
+<ol>
+    <li>Pornographic content, or linking directly to pornographic content, is <strong>banned</strong>.</li>
+    <li>There is a zero-tolerance policy towards racism, homophobia, and religious bigotry.</li>
+    <li>Illegal content, or linking to sites providing illegal torrents or other downloads, is forbidden.</li>
+    <li>Spammers will not be tolerated. </li>
+    <li>Swearing is OK, but not personal insults. Show common courtesy to fellow users.</li>
+    <li>Breaking the rules will get your post or comment deleted without warning. Continual abuse will result in 
+    your account being permanently deleted. </li>
+    <li>You are legally responsible for what you post in the country you are posting from.</li>
+    <li>If you suspect any of the rules being broken, <a href="{{ contact_url }}">contact us</a> directly or use the "Report abuse" link next to the comments.</li>
+    <li>If you wish to help out by volunteering as a moderator, please contact us. Your help will be greatly appreciated.</li> 
+</ol>
+
+{% endtrans %}
+
+{% endblock %}

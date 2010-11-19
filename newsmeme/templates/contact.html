@@ -1,0 +1,44 @@
+{% extends theme("layout.html") %}
+{% from "macros/_forms.html" import render_errors %}
+
+{% block content %}
+<h2>{{ _('Contact us') }}</h2>
+<p>
+{% trans %}
+Any questions, suggestions, problems with this site ?
+Please leave a message below:
+{% endtrans %}
+
+</p>
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <ul>
+        
+        <li>
+        {{ render_errors(form.name) }}
+        {{ form.name.label }}
+        {{ form.name }}
+        </li>
+
+        <li>
+        {{ render_errors(form.email) }}
+        {{ form.email.label }}
+        {{ form.email }}
+        </li>
+
+        <li>
+        {{ render_errors(form.subject) }}
+        {{ form.subject.label }}
+        {{ form.subject }}
+        </li>
+        <li>
+        {{ render_errors(form.message) }}
+        {{ form.message.label }}<br>
+        {{ form.message }}
+        </li>
+        <li>
+        {{ form.submit }}
+        </li>
+    </ul>
+</form>
+{% endblock %}

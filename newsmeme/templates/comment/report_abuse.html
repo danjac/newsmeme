@@ -1,0 +1,30 @@
+{% extends theme("layout.html") %}
+
+{% block content %}
+<h2>{{ _('Report abuse') }}</h2>
+
+<p>
+{% trans %}
+Please outline your complaint below. Your complaint will be emailed to the moderators and
+if necessary the comment will be deleted.
+{% endtrans %}
+</p>
+<h3>{{ _('Comment') }}</h3>
+{{ comment.markdown }}
+<p>
+<a href="{{ url_for("post.view", post_id=comment.post.id) }}#comment-{{ comment.id }}">{{ comment.post.title }}</a>
+</p>
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <ul>
+        <li>
+            {{ form.complaint }}
+        </li>
+        <li>
+        {{ form.submit }}
+            </li>
+ 
+    </ul>
+</form>
+
+{% endblock %}

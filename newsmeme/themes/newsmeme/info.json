@@ -1,0 +1,12 @@
+{
+    "application": "newsmeme",
+    "identifier": "newsmeme",
+    "name": "newsmeme",
+    "author": "Dan Jacob",
+    "description": "Default newsmeme theme",
+    "website": "thenewsmeme.com",
+    "license": "Public Domain",
+    "doctype": "html5"
+}
+
+

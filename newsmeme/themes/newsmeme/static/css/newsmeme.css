@@ -1,0 +1,24 @@
+/*
+
+newsmeme css
+
+Copyright(c) 2010 by Dan Jacob
+License: BSD, see LICENSE for more details.
+*/
+
+h1 { font-family: Courier, serif; font-weight: bold; }
+
+div.navigation li { border-right: 1pt solid #eee; }
+div.navigation { border-bottom: 1pt solid #eee; }
+
+ul.posts li:hover { background-color: #eee; }
+
+.post-info, .comment-info { color: #555; }
+
+span.domain { font-size: smaller; color: #555; }
+
+.faded { color: #aaa; }
+
+a.tag-odd { color: #004400; }
+
+div.header  h1 { background: url('/_themes/newsmeme/images/logo.png') no-repeat; height: 35px; margin-top: 20px; }

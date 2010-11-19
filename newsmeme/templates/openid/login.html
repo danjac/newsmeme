@@ -1,0 +1,34 @@
+{% extends theme("layout.html") %}
+{% from "macros/_forms.html" import render_errors %}
+
+{% set selected_tab="login" %}
+
+{% block content %}
+
+<h2>{{ _('Login to newsmeme') }}</h2>
+<p>
+{% trans %}
+Use your OpenID to sign in to newsmeme. 
+<a target="_blank" href="http://openid.net/get-an-openid/">You may already have an OpenID.</a>
+{% endtrans %}
+</p>
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <div style="display:none;">
+        {{ form.next }}
+    </div>
+    <ul>
+        <li>
+            {{ render_errors(form.openid) }}
+            {{ form.openid(size=30, class_="openid") }}
+        </li>
+        <li>
+            {{ form.submit }}
+        </li>
+    </ul>
+</form>
+<p>
+<a href="{{ url_for('account.login') }}">{{ _('Login with your password') }}</a>
+</p>
+
+{% endblock %}

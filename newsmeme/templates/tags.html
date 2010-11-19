@@ -1,0 +1,22 @@
+
+{% extends theme("layout.html") %}
+
+{% block content %}
+
+<h2>{{ _('Trends') }}</h2>
+<p class="tag_cloud">
+    {% for tag in tag_cloud %}
+    <a style="display:none;" class="tag-{{ tag.size }} tag-{{ loop.cycle('odd', 'even') }}" href="{{ tag.url }}">{{ tag.name }}</a>
+    {% endfor %}
+</p>
+{% endblock %}
+
+{% block load_js %}
+<script type="text/javascript">
+$(document).ready(function(){
+    {% for group in tag_cloud|groupby('size') %}
+    $('.tag-{{ group.grouper }}').fadeIn(2000 * {{ group.grouper }});
+    {% endfor %}
+});
+</script>
+{% endblock %}

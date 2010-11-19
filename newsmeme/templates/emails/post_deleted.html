@@ -1,0 +1,11 @@
+
+{% trans title=post.title, contact_url=url_for('frontend.contact', _external=True) %}
+Your post "{{ title }}" has been deleted by a moderator.
+
+It could be because the content was deemed unsuitable.
+
+Please contact us if you object to this removal.
+
+Contact us: {{ contact_url }}
+
+{% endtrans %}

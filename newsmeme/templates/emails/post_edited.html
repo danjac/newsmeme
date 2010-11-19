@@ -1,0 +1,11 @@
+{% trans title=post.title, contact_url=url_for('frontend.contact', _external=True), post_url=post.permalink %}
+Your post "{{ title }}" has been edited by a moderator.
+
+It could be because the content was deemed unsuitable.
+
+Please contact us if you object to the edit.
+
+Contact us: {{ contact_url }}
+
+Post: {{ post_url }}
+{% endtrans %}

@@ -1,0 +1,18 @@
+{% trans author=author.username, 
+         title=post.title, 
+         comment_author=comment.author.username, 
+         comment=comment.comment, 
+         url=comment.permalink %}
+         
+Hi {{ author }},
+
+{{ comment_author }} has commented on your post "{{ title }}":
+
+{{ comment }}
+
+To reply to this comment go here:
+
+{{ url }}
+
+{% endtrans %}
+

@@ -1,0 +1,61 @@
+{% extends theme("layout.html") %}
+
+{% block extrahead %}
+<link href="{{ url_for('feeds.user', username=user.username) }}" rel="alternate" type="application/atom+xml" title="newsmeme - hot" /> 
+{% endblock %}
+
+
+{% macro userlink(tab, text, url) -%}
+{% if tab==selected_user_tab %}
+<strong>{{ text }}</strong>
+{% else %}
+<a href="{{ url }}">{{ text }}</a>
+{% endif %}
+{%- endmacro %}
+
+{% block content %}
+<div class="container">
+    <div class="span-12">
+        <h2>{{ user.username }} </h2>
+        <h3>
+            <strong>{{ user.karma }}</strong> {{ _('karma') }} | 
+            {{ _('joined') }} {{ user.date_joined|timesince }}
+        </h3>
+    </div>
+    <div class="span-12 last">
+        <img src="{{ user.gravatar_url(80) }}" alt="{{ user.username }}">
+    </div>
+</div>
+<div class="navigation">
+    <ul>
+        <li class="first">{{ userlink('posts', _("posts (%(num_posts)d)", num_posts=num_posts), url_for('user.posts', username=user.username)) }}</li>
+        <li>{{ userlink('comments', _("comments (%(num_comments)d)", num_comments=num_comments), url_for('user.comments', username=user.username)) }}</li>
+        <li>{{ userlink('following', _("following (%(num_following)d)", num_following=user.num_following), url_for('user.following', username=user.username)) }}</li>
+        <li>{{ userlink('followers', _("followers (<span id='followers'>%(num_followers)d</span>)", num_followers=user.num_followers), url_for('user.followers', username=user.username)) }}</li>
+    </ul>
+</div>
+
+<p>
+    {% if g.user.id == user.id %}
+    <a href="{{ url_for("account.edit") }}">edit your account</a> 
+    {% elif g.user %}
+    {% if g.user.is_friend(user) %}
+    <h3>{{ _("You are friends with %(name)s", name=user.username) }}</h3>
+    {% endif %}
+    <span id="follow" {% if g.user.is_following(user) %} style="display:none;"{% endif %}>
+        <a href="#" onclick="newsmeme.ajax_post('{{ url_for("account.follow", user_id=user.id) }}'); return false;">{{ _("follow") }} {{ user.username }}</a>
+    </span>
+    <span id="unfollow" {% if not g.user.is_following(user) %} style="display:none;"{% endif %}>
+        <a href="#" onclick="newsmeme.ajax_post('{{ url_for("account.unfollow", user_id=user.id) }}'); return false;">{{ _("unfollow") }} {{ user.username }}</a>
+    </span>
+    {% if user.permissions.send_message %}
+    | <a id="send_message" href="{{ url_for('user.send_message', user_id=user.id) }}">{{ _("send message to %(name)s", name=user.username) }}</a>
+    {% endif %}
+
+    {% endif %}
+</p>
+
+{% block page_content %}
+{% endblock %}
+
+{% endblock %}

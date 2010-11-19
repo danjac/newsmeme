@@ -1,0 +1,27 @@
+{% extends theme("layout.html") %}
+{% from "macros/_forms.html" import render_errors %}
+
+{% block content %}
+
+<h2>{{ _("Send message to %(name)s", name=user.username) }}</h2>
+
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <ul>
+    <li>
+        {{ render_errors(form.subject) }}
+        {{ form.subject.label }}<br>
+        {{ form.subject(size=50) }}
+        </li>
+        <li>
+        {{ render_errors(form.message) }}
+        {{ form.message.label }}<br>
+        {{ form.message }}
+        </li>
+        <li>
+        {{ form.submit }}
+    </li>
+    </ul> 
+</form>
+
+{% endblock %}

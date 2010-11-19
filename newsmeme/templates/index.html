@@ -1,0 +1,30 @@
+{% extends theme("layout.html") %}
+
+{% from "macros/_paginate.html" import paginate %}
+{% from "macros/_post.html" import render_post with context %}
+
+{% block extrahead %}
+<link href="{{ url_for('feeds.index') }}" rel="alternate" type="application/atom+xml" title="newsmeme - hot" /> 
+{% endblock %}
+
+{% set selected_tab="hot" %}
+
+{% block content %}
+{% if page_obj.total %}
+
+<ul class="posts">
+{% for post in page_obj.items %}
+<li>
+    {{ render_post(post) }}
+</li>
+
+{% endfor %}
+</ul>
+
+{% else %}
+{{ _("Nobody's posted anything yet.") }}
+{% endif %}
+
+{{ paginate(page_obj, page_url) }}
+
+{% endblock %}

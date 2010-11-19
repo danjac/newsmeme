@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}newsmeme{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/blueprint/screen.css') }}" type="text/css" media="screen, projection"> 
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/blueprint/print.css') }}" type="text/css" media="print"> 
+        <!--[if lt IE 8]><link rel="stylesheet" href="{{ url_for('.static', filename='css/blueprint/ie.css') }}" type="text/css" media="screen, projection"><![endif]--> 
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/base.css') }}" type="text/css" media="screen, projection">
+        {% endblock %}
+        {% block extra_stylesheets %}{% endblock %}
+        {% block favicon %}
+        <link rel="shortcut icon" href="{{ url_for('.static', filename='images/favicon.ico') }}">
+        {% endblock %}
+        {% block javascripts %}
+        <script src="{{ url_for('.static', filename='js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('.static', filename='js/newsmeme.js') }}"></script>
+        {% endblock %}
+        {% block extra_javascripts %}{% endblock %}
+        {% block extrahead %}{% endblock %}
+    </head>
+    <body>
+        <div class="container">
+        
+        <div class="header span-24 last">
+            <h1 class="span-12">{% block header %}{% endblock %}</h1>
+        {% block topnav %}
+        <ul class="topnav span-12 last">
+            {% if g.user %}
+            <li><a href="{{ url_for("user.posts", username=g.user.username) }}">{{ g.user.username }}</a> ({{ g.user.karma }})</li>
+            <li><a href="{{ url_for('account.logout') }}">{{ _('logout') }}</a></li>
+            {% else %}
+            <li><a href="{{ url_for('account.login', next=request.url if g.keep_login_url else None) }}">{{ _('login') }}</a></li>
+            <li><a href="{{ url_for('account.signup', next=request.url if g.keep_login_url else None) }}">{{ _('signup') }}</a></li>
+        {% endif %}
+        <li><a href="{{ url_for('frontend.contact') }}">{{ _('contact us') }}</a>  </li> 
+        <li><a href="{{ url_for('frontend.rules') }}">{{ _('rules') }}</a> </li>
+        <li><a href="http://bitbucket.org/danjac/newsmeme/issues/new">{{ _('report bugs') }}</a></li>
+        </ul>
+        {% endblock %}
+        </div><!-- end of header -->
+        
+        {% block main_nav %}
+        <div class="navigation span-24 last">
+
+            {% macro tabbed_link(tab, text, url) -%}
+            {% if tab==selected_tab %}
+            <strong>{{ text }}</strong>
+            {% else %}
+            <a href="{{ url }}">{{ text }}</a>
+            {% endif %}
+            {%- endmacro %}
+   
+            <ul class="span-24">
+                <li class="first">{{ tabbed_link('hot', _('hot'), url_for('frontend.index')) }}</li>
+                <li>{{ tabbed_link('latest', _('new'), url_for('frontend.latest')) }}</li>
+                <li>{{ tabbed_link('deadpool', _('deadpool'), url_for('frontend.deadpool')) }}</li>
+                <li>{{ tabbed_link('submit', _('submit'), url_for('frontend.submit')) }}</li>
+                <li class="last">
+                    <form id="search" method="GET" action="{{ url_for('frontend.search') }}">
+                        <div>
+                            <input type="text" placeholder="{{ _('search newsmeme') }}" name="keywords">
+                    </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        {% endblock %}
+
+        {% if tags %}
+        <div class="tags span-24">
+            <ul>
+                <li><strong>{{ _('trending') }}</strong></li>
+                {% for tag in tags %}
+                <li><a href="{{ tag.url }}">{{ tag.name }}</a></li>
+                {% endfor %}
+                <li><a href="{{ url_for('frontend.tags') }}">more &rarr;</a></li>
+            </ul>
+        </div>
+        {% endif %}
+
+        <div class="content span-24 last">
+        {% set messages = get_flashed_messages(True) %}
+        {% if messages %}
+        <ul class="messages">
+            {% for status, message in messages %}
+            <li class="{{ status }}">{{ message }}</li>
+            {% endfor %}
+        </ul>   
+        {% else %}
+        <ul class="messages" style="display:none;"></ul>
+        {% endif %}
+
+        {% block content %}
+
+        {% endblock %}
+        </div><!-- end of content -->
+
+        {% block footer %}
+        <div class="footer span-24 last">
+            <a href="http://flask.pocoo.org/"><img
+           src="http://flask.pocoo.org/static/badges/powered-by-flask-s.png"
+           border="0"
+           alt="powered by Flask"
+           title="powered by Flask"></a>
+       <p>
+       {% trans %}
+       &copy; Copyright 2010 Dan Jacob. Source code for newsmeme can be found <a href="http://bitbucket.org/danjac/newsmeme">here</a>. 
+       {% endtrans %}
+       </p>
+        </div><!-- end of footer -->
+        {% endblock %}
+        
+        </div><!-- end of container -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.messages').fadeOut(3000);
+    });
+</script>
+
+{% block load_js %}{% endblock %}
+
+{% if config.GOOGLE_TRACKING_CODE %}
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ config.GOOGLE_TRACKING_CODE }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+{% endif %}
+    </body>
+</html>

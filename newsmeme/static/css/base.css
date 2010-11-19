@@ -1,0 +1,68 @@
+/*
+
+Base CSS
+
+Copyright(c) 2010 by Dan Jacob
+License: BSD, see LICENSE for more details.
+*/
+
+
+a { text-decoration: none; }
+
+ul { margin:0; padding: 0; list-style-type: none; }
+
+div.navigation ul { margin:0; padding:0; }
+div.navigation li { display: inline; padding: 0 20px;  font-size: larger; }
+div.navigation li.first { padding-left: 0; }
+div.navigation li.last { border-right: 0; }
+div.navigation { margin-bottom: 10px; }
+
+div.content { margin-bottom: 30px; }
+
+ul.posts h3 { margin-bottom: 0; font-size: 1.2em; }
+ul.posts li { margin-bottom: 0.5em; }
+
+ul.topnav li { display:inline; padding-left: 20px;  }
+
+label { width: 200px; float: left; }
+label.checkbox { float:none; width: none; }
+
+ul.comments li { margin-bottom: 0.5em; }
+
+form#search, form#search div { display:inline; }
+
+div.pagination { font-size: larger; margin-bottom: 2em; }
+
+input.openid { background: url(/static/images/openid.png) no-repeat; }
+
+div.categories li { display:inline;  padding: 0 5px; }
+div.categories li.first { padding-left: 0; }
+div.categories li.last { border-right: 0; }
+div.categories { margin-bottom: 2em; }
+
+div.tags ul { margin: 0; padding: 0; }
+.tags li { display: inline; padding-right: 20px;  }
+
+div.tags { margin-bottom: 30px; }
+
+a.tag-1 { font-size: 0.9em; font-weight: 100; }
+a.tag-2 { font-size: 1.1em; font-weight: 200; }
+a.tag-3 { font-size: 1.3em; font-weight: 300; }
+a.tag-4 { font-size: 1.5em; font-weight: 400; }
+a.tag-5 { font-size: 1.7em; font-weight: 500; }
+a.tag-6 { font-size: 1.9em; font-weight: 600; }
+a.tag-7 { font-size: 2.1em; font-weight: 700; }
+a.tag-8 { font-size: 2.3em; font-weight: 800; }
+a.tag-9 { font-size: 2.5em; font-weight: 900; }
+a.tag-10 { font-size: 2.7em; font-weight: 900; }
+
+ul.errors { width: 470px; }
+
+ul.following li, ul.followers li { display:inline; }
+
+li.faded { font-weight: 100; }
+
+a.public { color: #009; }
+a.friends { color: #090; }
+a.private { color: #900; }
+

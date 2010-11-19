@@ -1,0 +1,37 @@
+{% extends "user/layout.html" %}
+
+{% set selected_user_tab = "posts" %}
+
+{% block page_content %}
+
+{% if page_obj.total %}
+<ul class="posts">
+{% for post in page_obj.items %}
+<li>
+<h3>
+    
+{% if post.permissions.vote %}
+<span id="vote-{{ post.id }}">
+    <a href="#" onclick="newsmeme.vote_post('{{ url_for('post.upvote', post_id=post.id) }}'); return false;"><img src="{{ theme_static("images/up-icon.png") }}"></a>
+    <a href="#" onclick="newsmeme.vote_post('{{ url_for('post.downvote', post_id=post.id) }}'); return false;"><img src="{{ theme_static("images/down-icon.png") }}"></a>  
+</span>
+{% endif %}
+<a href="{{ post.link if post.link else url_for('post.view', post_id=post.id) }}">{{ post.title }}</a>
+    
+{% if post.link %}
+<span class="domain">&rarr; {{ post.domain }}</span>
+{% endif %}
+
+</h3>
+<p>
+<a href="{{ url_for('post.view', post_id=post.id) }}">Comments ({{ post.num_comments }})</a> | 
+{{ _('Score') }} <span id="score-{{ post.id }}">{{ post.score }}</span> | 
+{{ _('Posted') }} {{ post.date_created|timesince }} 
+</li>
+{% endfor %}
+</ul>
+{% else %}
+{{ _("Nobody's posted anything yet.") }}
+{% endif %}
+
+{% endblock %}

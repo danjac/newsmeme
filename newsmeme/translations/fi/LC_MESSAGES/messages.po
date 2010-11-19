@@ -1,0 +1,685 @@
+# Finnish translations for PROJECT.
+# Copyright (C) 2010 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2010-08-06 07:27+0100\n"
+"PO-Revision-Date: 2010-08-06 07:30+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: fi <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.5\n"
+
+#: newsmeme/__init__.py:89
+msgid "Sorry, page not found"
+msgstr "Sivu ei löyty"
+
+#: newsmeme/__init__.py:95
+msgid "Sorry, not allowed"
+msgstr "Kielletty"
+
+#: newsmeme/decorators.py:14
+msgid "Please login to see this page"
+msgstr "Kirjaudu sisään"
+
+#: newsmeme/forms.py:25
+msgid "You can only use letters, numbers or dashes"
+msgstr "Vain kirjaimet, numerot ja '-'"
+
+#: newsmeme/forms.py:29
+msgid "Your name"
+msgstr "Nimi"
+
+#: newsmeme/forms.py:31
+msgid "Your name is required"
+msgstr "Nimi puuttuu"
+
+#: newsmeme/forms.py:34 newsmeme/forms.py:112
+msgid "Your email address"
+msgstr "Sähköpostiosoite"
+
+#: newsmeme/forms.py:36 newsmeme/forms.py:87 newsmeme/forms.py:114
+#: newsmeme/forms.py:184
+msgid "Email address required"
+msgstr "Sähköpostiosoite puuttuu"
+
+#: newsmeme/forms.py:37 newsmeme/forms.py:88 newsmeme/forms.py:115
+#: newsmeme/forms.py:216
+msgid "A valid email address is required"
+msgstr "Sähköpostiosoite ei ole oikea"
+
+#: newsmeme/forms.py:40
+msgid "Subject"
+msgstr "Otsikko"
+
+#: newsmeme/forms.py:42
+msgid "Subject required"
+msgstr "Otsikko puuttuu"
+
+#: newsmeme/forms.py:45
+msgid "Message"
+msgstr "Viesti"
+
+#: newsmeme/forms.py:47
+msgid "Message required"
+msgstr "Viesti puuttuu"
+
+#: newsmeme/forms.py:55
+msgid "Remember me"
+msgstr "Muista"
+
+#: newsmeme/forms.py:57
+msgid "Username or email address"
+msgstr "Käyttäjänimi tai sähköpostiosoite"
+
+#: newsmeme/forms.py:59
+msgid "You must provide an email or username"
+msgstr "Käyttäjänimi tai sähköpostiosoite puuttuu"
+
+#: newsmeme/forms.py:62 newsmeme/forms.py:75
+msgid "Password"
+msgstr "Salasana"
+
+#: newsmeme/forms.py:69 newsmeme/forms.py:178
+msgid "Username"
+msgstr "Käyttäjänimi"
+
+#: newsmeme/forms.py:71 newsmeme/forms.py:179
+msgid "Username required"
+msgstr "Käyttäjänimi puuttuu"
+
+#: newsmeme/forms.py:77
+msgid "Password required"
+msgstr "Salasana puuttuu"
+
+#: newsmeme/forms.py:80 newsmeme/forms.py:229
+msgid "Password again"
+msgstr "Toista salasana"
+
+#: newsmeme/forms.py:82 newsmeme/forms.py:231
+msgid "Passwords don't match"
+msgstr "Salasanat eivat sovi"
+
+#: newsmeme/forms.py:85 newsmeme/forms.py:182
+msgid "Email address"
+msgstr "Sähköpostiosoite"
+
+#: newsmeme/forms.py:91 newsmeme/forms.py:190 newsmeme/forms.py:236
+msgid "Copy the words appearing below"
+msgstr "Toista seuraavat sanat"
+
+#: newsmeme/forms.py:96 newsmeme/forms.py:129 newsmeme/forms.py:195
+msgid "This username is taken"
+msgstr "Käyttäjänimi jo käytössä"
+
+#: newsmeme/forms.py:101 newsmeme/forms.py:136 newsmeme/forms.py:200
+msgid "This email is taken"
+msgstr "Sähköpostiosoite jo käytössä"
+
+#: newsmeme/forms.py:108
+msgid "Username is required"
+msgstr "Käyttäjänimi puuttuu"
+
+#: newsmeme/forms.py:141
+msgid "Title of your post"
+msgstr "Tiedotteen otsikko"
+
+#: newsmeme/forms.py:143
+msgid "Title required"
+msgstr "Otsikko puuttuu"
+
+#: newsmeme/forms.py:146
+msgid "Link"
+msgstr "Linkki"
+
+#: newsmeme/forms.py:149
+msgid "This is not a valid URL"
+msgstr "URL ei ole oikea"
+
+#: newsmeme/forms.py:152
+msgid "Description"
+msgstr "Kuvaus"
+
+#: newsmeme/forms.py:154 newsmeme/templates/tags.html:6
+msgid "Tags"
+msgstr "Tagit"
+
+#: newsmeme/forms.py:165
+msgid "This link has already been posted"
+msgstr "Linki on jo käytössä"
+
+#: newsmeme/forms.py:171
+msgid "Comment is required"
+msgstr "Kommentti puuttuu"
+
+#: newsmeme/forms.py:185
+msgid "Valid email address required"
+msgstr "Sähköpostiosoite ei ole oikea"
+
+#: newsmeme/forms.py:208
+msgid "OpenID is required"
+msgstr ""
+
+#: newsmeme/forms.py:209
+msgid "OpenID must be a valid URL"
+msgstr ""
+
+#: newsmeme/forms.py:226
+msgid "Password is required"
+msgstr ""
+
+#: newsmeme/forms.py:242
+msgid "You must enter the details of the complaint"
+msgstr ""
+
+#: newsmeme/helpers.py:36
+msgid "just now"
+msgstr ""
+
+#: newsmeme/templates/contact.html:5
+msgid "Contact us"
+msgstr ""
+
+#: newsmeme/templates/contact.html:7
+msgid ""
+"\n"
+"Any questions, suggestions, problems with this site ?\n"
+"Please leave a message below:\n"
+msgstr ""
+
+#: newsmeme/templates/contact.html:40
+msgid "Send"
+msgstr ""
+
+#: newsmeme/templates/index.html:25 newsmeme/templates/latest.html:25
+#: newsmeme/templates/tag.html:25 newsmeme/templates/user/posts.html:34
+msgid "Nobody's posted anything yet."
+msgstr ""
+
+#: newsmeme/templates/layout.html:22
+msgid "logout"
+msgstr "Kirjaudu ulos"
+
+#: newsmeme/templates/layout.html:24
+msgid "login"
+msgstr "Kirjaudu sisään"
+
+#: newsmeme/templates/layout.html:25
+msgid "signup"
+msgstr "Rekisteröi"
+
+#: newsmeme/templates/layout.html:27
+msgid "contact us"
+msgstr "Kirjoita meille"
+
+#: newsmeme/templates/layout.html:28
+msgid "rules"
+msgstr "Säännöt"
+
+#: newsmeme/templates/layout.html:29
+msgid "report bugs"
+msgstr "Bugit"
+
+#: newsmeme/templates/layout.html:45
+msgid "hot"
+msgstr "Kuumimmat"
+
+#: newsmeme/templates/layout.html:46
+msgid "new"
+msgstr "Uusimmat"
+
+#: newsmeme/templates/layout.html:47
+msgid "submit"
+msgstr "Lähettä"
+
+#: newsmeme/templates/layout.html:51
+msgid "search newsmeme"
+msgstr "Haku"
+
+#: newsmeme/templates/layout.html:62
+msgid "trending"
+msgstr "Trendit"
+
+#: newsmeme/templates/layout.html:94
+msgid ""
+"\n"
+"       &copy; Copyright 2010 Dan Jacob. Source code for newsmeme can be "
+"found <a href=\"http://bitbucket.org/danjac/newsmeme\">here</a>. \n"
+"       "
+msgstr ""
+
+#: newsmeme/templates/rules.html:4
+#, python-format
+msgid ""
+"\n"
+"<h2>The House Rules</h2>\n"
+"<ol>\n"
+"    <li>Pornographic content, or linking directly to pornographic "
+"content, is <strong>banned</strong>.</li>\n"
+"    <li>There is a zero-tolerance policy towards rascism, homophobia, and"
+" religious bigotry.</li>\n"
+"    <li>Illegal content, or linking to sites providing illegal torrents "
+"or other downloads, is forbidden.</li>\n"
+"    <li>Spammers will not be tolerated. </li>\n"
+"    <li>Swearing is OK, but not personal insults. Show common courtesy to"
+" fellow users.</li>\n"
+"    <li>Breaking the rules will get your post or comment deleted without "
+"warning. Continual abuse will result in \n"
+"    your account being permanently deleted. </li>\n"
+"    <li>You are legally responsible for what you post in the country you "
+"are posting from.</li>\n"
+"    <li>If you suspect any of the rules being broken, <a "
+"href=\"%(contact_url)s\">contact us</a> directly or use the \"Report "
+"abuse\" link next to the comments.</li>\n"
+"    <li>If you wish to help out by volunteering as a moderator, please "
+"contact us. Your help will be greatly appreciated.</li> \n"
+"</ol>\n"
+"\n"
+msgstr ""
+
+#: newsmeme/templates/search.html:8
+msgid "Search results for"
+msgstr "Hakutulokset"
+
+#: newsmeme/templates/search.html:10
+msgid "Results"
+msgstr "Tulokset"
+
+#: newsmeme/templates/search.html:22
+msgid "Sorry, nothing found for your search."
+msgstr ""
+
+#: newsmeme/templates/submit.html:8
+msgid "Submit a post"
+msgstr ""
+
+#: newsmeme/templates/submit.html:27 newsmeme/templates/post/edit_post.html:25
+msgid "Separate tags with a comma"
+msgstr ""
+
+#: newsmeme/templates/tag.html:11
+msgid "Posts for tag"
+msgstr ""
+
+#: newsmeme/templates/account/change_password.html:5
+msgid "Change your password"
+msgstr "Vaihda salasana"
+
+#: newsmeme/templates/account/change_password.html:24
+#: newsmeme/templates/account/edit_account.html:22
+msgid "save"
+msgstr "Tallenna"
+
+#: newsmeme/templates/account/delete_account.html:5
+msgid "Delete your account"
+msgstr ""
+
+#: newsmeme/templates/account/delete_account.html:7
+#, python-format
+msgid ""
+"\n"
+"Are you sure you want to leave ? If so please confirm below.\n"
+"Click <a href=\"%(home_url)s\">here</a> to cancel.\n"
+msgstr ""
+
+#: newsmeme/templates/account/delete_account.html:20
+#: newsmeme/templates/macros/_post.html:47
+msgid "delete"
+msgstr "poista"
+
+#: newsmeme/templates/account/edit_account.html:5
+msgid "Edit your account"
+msgstr ""
+
+#: newsmeme/templates/account/edit_account.html:7
+msgid "change your password"
+msgstr "vaihda salasana"
+
+#: newsmeme/templates/account/edit_account.html:8
+msgid "delete your account"
+msgstr ""
+
+#: newsmeme/templates/account/login.html:8
+#: newsmeme/templates/openid/login.html:8
+msgid "Login to newsmeme"
+msgstr ""
+
+#: newsmeme/templates/account/login.html:11
+#, python-format
+msgid ""
+"\n"
+"Login with <a href=\"%(openid_url)s\">OpenID</a>\n"
+msgstr ""
+
+#: newsmeme/templates/account/login.html:36
+#: newsmeme/templates/openid/login.html:26
+msgid "Login"
+msgstr "kirjaudu"
+
+#: newsmeme/templates/account/login.html:41
+msgid "Not a member yet ? Sign up to newsmeme !"
+msgstr ""
+
+#: newsmeme/templates/account/login.html:44
+msgid "Forgot your password ?"
+msgstr "Oletko unohtanut salasanasi ?"
+
+#: newsmeme/templates/account/recover_password.html:5
+#: newsmeme/views/account.py:116
+msgid "Recover your password"
+msgstr "Hae uusi salasana"
+
+#: newsmeme/templates/account/recover_password.html:16
+msgid "find my account"
+msgstr ""
+
+#: newsmeme/templates/account/signup.html:7
+#: newsmeme/templates/openid/signup.html:7
+msgid "Sign up to newsmeme"
+msgstr "Kirjaudu newsmemeen"
+
+#: newsmeme/templates/account/signup.html:10
+#, python-format
+msgid ""
+"\n"
+"Sign up with <a href=\"%(openid_url)s\">OpenID</a> \n"
+msgstr ""
+
+#: newsmeme/templates/account/signup.html:41
+#: newsmeme/templates/openid/signup.html:27
+msgid "Sign up"
+msgstr ""
+
+#: newsmeme/templates/comment/edit_comment.html:18
+#: newsmeme/templates/post/add_comment.html:18
+#: newsmeme/templates/post/post.html:60
+msgid "add comment"
+msgstr ""
+
+#: newsmeme/templates/comment/report_abuse.html:4
+msgid "Report abuse"
+msgstr ""
+
+#: newsmeme/templates/comment/report_abuse.html:7
+msgid ""
+"\n"
+"Please outline your complaint below. Your complaint will be emailed to "
+"the moderators and\n"
+"if necessary the comment will be deleted.\n"
+msgstr ""
+
+#: newsmeme/templates/comment/report_abuse.html:12
+msgid "Comment"
+msgstr ""
+
+#: newsmeme/templates/comment/report_abuse.html:24
+msgid "report"
+msgstr ""
+
+#: newsmeme/templates/emails/post_deleted.html:2
+#, python-format
+msgid ""
+"\n"
+"Your post \"%(title)s\" has been deleted by a moderator.\n"
+"\n"
+"It could be because the content was deemed unsuitable.\n"
+"\n"
+"Please contact us if you object to this removal.\n"
+"\n"
+"Contact us: %(contact_url)s\n"
+"\n"
+msgstr ""
+
+#: newsmeme/templates/emails/post_edited.html:1
+#, python-format
+msgid ""
+"\n"
+"Your post \"%(title)s\" has been edited by a moderator.\n"
+"\n"
+"It could be because the content was deemed unsuitable.\n"
+"\n"
+"Please contact us if you object to the edit.\n"
+"\n"
+"Contact us: %(contact_url)s\n"
+"\n"
+"Post: %(post_url)s\n"
+msgstr ""
+
+#: newsmeme/templates/emails/recover_password.html:1
+#, python-format
+msgid ""
+"\n"
+"Please click on the link below to recover your password:\n"
+"\n"
+"%(change_password_url)s\n"
+msgstr ""
+
+#: newsmeme/templates/errors/404.html:4 newsmeme/templates/errors/500.html:5
+msgid "Sorry !"
+msgstr "Anteeksi !"
+
+#: newsmeme/templates/errors/404.html:6
+msgid "We can't seem to find the page you are looking for."
+msgstr ""
+
+#: newsmeme/templates/errors/500.html:7
+#, python-format
+msgid ""
+"\n"
+"    It looks like an error has occurred. The admins will have been sent a"
+" nasty email telling\n"
+"    them to fix the problem as soon as possible. However if this issue "
+"persists then please \n"
+"    <a href=\"%(contact_url)s\">contact us</a> or \n"
+"    <a href=\"http://bitbucket.org/danjac/newsmeme/issues/new\">report a "
+"bug</a>.\n"
+"    "
+msgstr ""
+
+#: newsmeme/templates/macros/_paginate.html:7
+msgid "newer"
+msgstr "uusimmat"
+
+#: newsmeme/templates/macros/_paginate.html:13
+msgid "older"
+msgstr "vanhemmat"
+
+#: newsmeme/templates/macros/_post.html:2
+msgid ""
+"\n"
+"<small>You can use <a target=\"_blank\" "
+"href=\"http://en.wikipedia.org/wiki/Markdown\">Markdown</a> syntax in "
+"your comments.</small>\n"
+msgstr ""
+
+#: newsmeme/templates/macros/_post.html:23
+#: newsmeme/templates/macros/_post.html:39
+#: newsmeme/templates/user/comments.html:19
+#: newsmeme/templates/user/posts.html:28
+msgid "Score"
+msgstr "Määrä"
+
+#: newsmeme/templates/macros/_post.html:24
+#: newsmeme/templates/macros/_post.html:40 newsmeme/templates/post/post.html:37
+#: newsmeme/templates/user/comments.html:20
+#: newsmeme/templates/user/posts.html:29
+msgid "Posted"
+msgstr ""
+
+#: newsmeme/templates/macros/_post.html:25 newsmeme/templates/post/post.html:37
+msgid "by"
+msgstr ""
+
+#: newsmeme/templates/macros/_post.html:49
+msgid "Are you sure you want to delete this comment ?"
+msgstr ""
+
+#: newsmeme/templates/macros/_post.html:50 newsmeme/templates/post/post.html:47
+msgid "yes"
+msgstr "Kyllä"
+
+#: newsmeme/templates/macros/_post.html:51 newsmeme/templates/post/post.html:48
+msgid "no"
+msgstr "Ei"
+
+#: newsmeme/templates/macros/_post.html:55
+msgid "report abuse"
+msgstr ""
+
+#: newsmeme/templates/openid/login.html:10
+msgid ""
+"\n"
+"Use your OpenID to sign in to newsmeme. \n"
+"<a target=\"_blank\" href=\"http://openid.net/get-an-openid/\">You may "
+"already have an OpenID.</a>\n"
+msgstr ""
+
+#: newsmeme/templates/openid/login.html:31
+msgid "Login with your password"
+msgstr ""
+
+#: newsmeme/templates/post/edit_post.html:6
+msgid "Edit your post"
+msgstr ""
+
+#: newsmeme/templates/post/edit_post.html:33
+msgid "Save"
+msgstr "Tallenna"
+
+#: newsmeme/templates/post/post.html:46
+msgid "Are you sure you want to delete this post ?"
+msgstr ""
+
+#: newsmeme/templates/post/post.html:52
+msgid "Add a comment"
+msgstr ""
+
+#: newsmeme/templates/post/post.html:78
+msgid "No comments have been posted yet."
+msgstr ""
+
+#: newsmeme/templates/user/comments.html:32
+#, python-format
+msgid ""
+"\n"
+"%(username)s has not posted any comments yet.\n"
+msgstr ""
+
+#: newsmeme/templates/user/layout.html:20
+msgid "posts"
+msgstr "tiedotteet"
+
+#: newsmeme/templates/user/layout.html:21
+msgid "comments"
+msgstr "kommentit"
+
+#: newsmeme/templates/user/layout.html:26
+msgid "Joined"
+msgstr ""
+
+#: newsmeme/templates/user/layout.html:27
+msgid "Karma"
+msgstr "Karma"
+
+#: newsmeme/templates/user/layout.html:28
+msgid "Posts"
+msgstr "Tiedotteet"
+
+#: newsmeme/templates/user/layout.html:29
+msgid "Comments"
+msgstr "Kommentit"
+
+#: newsmeme/views/account.py:42
+msgid ""
+"Your OpenID has been attached to your account. You can now sign in with "
+"your OpenID."
+msgstr ""
+
+#: newsmeme/views/account.py:47 newsmeme/views/openid.py:39
+#, python-format
+msgid "Welcome back, %s"
+msgstr "Tervetoloa takaisin, %s"
+
+#: newsmeme/views/account.py:58
+msgid "Sorry, invalid login"
+msgstr ""
+
+#: newsmeme/views/account.py:77 newsmeme/views/openid.py:95
+#, python-format
+msgid "Welcome, %s"
+msgstr "Tervetuloa, %s"
+
+#: newsmeme/views/account.py:93
+msgid "You are now logged out"
+msgstr ""
+
+#: newsmeme/views/account.py:107
+msgid "Please see your email for instructions on how to access your account"
+msgstr ""
+
+#: newsmeme/views/account.py:126
+msgid "Sorry, no user found for that email address"
+msgstr ""
+
+#: newsmeme/views/account.py:155
+msgid "Your password has been changed, please log in again"
+msgstr ""
+
+#: newsmeme/views/account.py:173
+msgid "Your account has been updated"
+msgstr ""
+
+#: newsmeme/views/account.py:193
+msgid "Your account has been deleted"
+msgstr ""
+
+#: newsmeme/views/comment.py:31
+msgid "Your comment has been updated"
+msgstr ""
+
+#: newsmeme/views/comment.py:78
+msgid "Your report has been sent to the admins"
+msgstr ""
+
+#: newsmeme/views/frontend.py:58
+msgid "Thank you for posting"
+msgstr "Kiitos tiedotteestä"
+
+#: newsmeme/views/frontend.py:119
+msgid "Thanks, your message has been sent to us"
+msgstr "Kiitos, viestisi lähettettiin meille"
+
+#: newsmeme/views/openid.py:49
+msgid ""
+"You already have an account with us. Please login with your email address"
+" so your OpenID can be attached to your user account"
+msgstr ""
+
+#: newsmeme/views/post.py:63
+msgid "Thanks for your comment"
+msgstr "Kiitos kommentista"
+
+#: newsmeme/views/post.py:101
+msgid "The post has been updated"
+msgstr ""
+
+#: newsmeme/views/post.py:104
+msgid "Your post has been updated"
+msgstr ""
+
+#: newsmeme/views/post.py:136
+msgid "The post has been deleted"
+msgstr "Tiedote poistettiin"
+
+#: newsmeme/views/post.py:139
+msgid "Your post has been deleted"
+msgstr "Tiedotteesi poistettiin"
+

@@ -1,0 +1,33 @@
+{% extends theme("layout.html") %}
+{% from "macros/_forms.html" import render_errors %}
+
+{% set selected_tab="signup" %}
+
+{% block content %}
+<h2>{{ _('Sign up to newsmeme') }}</h2>
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <div style="display:none;">
+        {{ form.next }}
+    </div>
+    <ul>
+        <li>
+            {{ render_errors(form.username) }}
+            {{ form.username.label }} {{ form.username }}
+        </li>
+        <li>
+            {{ render_errors(form.email) }}
+            {{ form.email.label }} {{ form.email }}
+            </li>
+        <li>
+            {{ render_errors(form.recaptcha) }}
+            {{ form.recaptcha.label }} <br> {{ form.recaptcha }}
+        </li>
+        <li>
+        {{ form.submit }}
+            </li>
+            
+    </ul>
+</form>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends theme("layout.html") %}
+{% from "macros/_forms.html" import render_errors %}
+{% from "macros/_post.html" import markdown_link %}
+
+{% set selected_tab="submit" %}
+
+{% block content %}
+<h2>{{ _('Submit a post') }}</h2>
+
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <ul>
+        <li>
+            {{ render_errors(form.title) }}
+            {{ form.title.label }}<br>
+            {{ form.title(size=50) }}
+        </li>
+        <li>
+            {{ render_errors(form.link) }}
+            {{ form.link.label }}<br>
+            {{ form.link(size=50) }}
+        </li>
+        <li>
+            {{ render_errors(form.tags) }}
+            {{ form.tags.label }}<br>
+            {{ form.tags(size=50) }}
+            <br><small>{{ _('Separate tags with a comma') }}</small>
+        </li>
+        <li>
+            {{ render_errors(form.description) }}
+            {{ form.description.label }}<br>
+            {{ form.description(rows=6, cols=30) }}
+        </li>
+        <li>
+            {{ render_errors(form.access) }}
+            {{ form.access.label }}<br>
+            {% for option in form.access %}
+            {{ option }} {{ option.label(class_="checkbox") }} 
+            {% endfor %}
+        </li>
+        <li>
+            <input type="submit" value="Submit">
+            </li>
+            <li>
+                {{ markdown_link() }}
+            </li>
+ 
+    </ul>
+</form>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+Hi {{ user.username }}
+
+User {{ g.user.username }} is now following you on newsmeme !
+
+If you wish to follow {{ g.user.username }} please go to their profile:
+
+{{ url_for("user.posts", username=g.user.username, _external=True) }}

@@ -1,0 +1,17 @@
+{% extends "user/layout.html" %}
+
+{% set selected_user_tab = "following" %}
+
+{% block page_content %}
+<ul class="following">
+
+    {% for user in following %}
+    <li>
+        <a href="{{ url_for("user.posts", username=user.username) }}">
+            <img src="{{ user.gravatar_url(30) }}" title="{{ user.username }}" alt="{{ user.username }}">
+        </a>
+    </li>
+    {% endfor %}
+
+</ul>
+{% endblock %}

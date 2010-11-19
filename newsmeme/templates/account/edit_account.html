@@ -1,0 +1,33 @@
+{% extends theme("layout.html") %}
+{% from "macros/_forms.html" import render_errors %}
+
+{% block content %}
+<h2>{{ _('Edit your account') }}</h2>
+<p>
+<a href="{{ url_for("account.change_password") }}">{{ _('change your password') }}</a> |
+<a href="{{ url_for("account.delete") }}">{{ _('delete your account') }}</a>
+</p>
+<form method="POST" action=".">
+    {{ form.hidden_tag() }}
+    <ul>
+        <li>
+            {{ render_errors(form.username) }}
+            {{ form.username.label }} {{ form.username }}
+        </li>
+        <li>
+            {{ render_errors(form.email) }}
+            {{ form.email.label }} {{ form.email }}
+        </li>
+        <li>
+            {{ form.receive_email.label(class_="checkbox") }} {{ form.receive_email }}
+        </li>
+        <li>
+            {{ form.email_alerts.label(class_="checkbox") }} {{ form.email_alerts }}
+        </li>
+        <li>
+            {{ form.submit }}
+            </li>
+    </ul>
+</form>
+
+{% endblock %}
