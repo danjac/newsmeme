@@ -19,7 +19,7 @@ production_settings.py
 dist
 docs/output
 
-uploads
+_uploads
 
 .hg
 .hgignore
