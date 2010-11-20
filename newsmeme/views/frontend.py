@@ -19,10 +19,8 @@ frontend = Module(__name__)
 @keep_login_url
 def index(page=1):
     
-    page_obj = \
-            Post.query.popular().hottest().\
-                restricted(g.user).as_list().\
-                paginate(page, per_page=Post.PER_PAGE)
+    page_obj = Post.query.popular().hottest().restricted(g.user).as_list().\
+                          paginate(page, per_page=Post.PER_PAGE)
         
     page_url = lambda page: url_for("frontend.index", page=page)
 
@@ -37,9 +35,8 @@ def index(page=1):
 @keep_login_url
 def latest(page=1):
     
-    page_obj = \
-            Post.query.popular().restricted(g.user).as_list().\
-                paginate(page, per_page=Post.PER_PAGE)
+    page_obj = Post.query.popular().restricted(g.user).as_list().\
+                          paginate(page, per_page=Post.PER_PAGE)
 
     page_url = lambda page: url_for("frontend.latest", page=page)
 
@@ -53,9 +50,9 @@ def latest(page=1):
 @cached()
 @keep_login_url
 def deadpool(page=1):
-    page_obj = \
-            Post.query.deadpooled().restricted(g.user).as_list().\
-                paginate(page, per_page=Post.PER_PAGE)
+
+    page_obj = Post.query.deadpooled().restricted(g.user).as_list().\
+                          paginate(page, per_page=Post.PER_PAGE)
 
     page_url = lambda page: url_for("frontend.deadpool", page=page)
 
@@ -95,9 +92,8 @@ def search(page=1):
     if not keywords:
         return redirect(url_for("frontend.index"))
 
-    page_obj = \
-            Post.query.search(keywords).restricted(g.user).\
-                as_list().paginate(page, per_page=Post.PER_PAGE)
+    page_obj = Post.query.search(keywords).restricted(g.user).as_list().
+                          paginate(page, per_page=Post.PER_PAGE)
 
     if page_obj.total == 1:
 
